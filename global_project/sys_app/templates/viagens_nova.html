@@ -1,1 +1,28 @@
-teste1
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <h1>Suas Novas Viagens!</h1>
+        <p>Por gentileza, registre sua nova viagem nos campos abaixo:
+
+        </p>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <label for="destino">Destino:</label>
+            <input type="text" name="destino" id="destino" required> <br><br>
+            
+            <label for="data_ida">Data Ida:</label>
+            <input type="date" name="data_ida" id="data_ida"> <br><br>
+            
+            <label for="data_volta">Data Volta:</label>
+            <input type="date" name="data_volta" id="data_volta"> <br><br>
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

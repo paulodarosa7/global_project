@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+    <p>    
+        <h1>Detalhes Viagens</h1>
+        <strong>Destino:</strong> {{ viagem.destino }}
+        <strong>Data de Ida:</strong> {{ viagem.data_ida }}
+        <strong>Data de Volta:</strong> {{ viagem.data_volta }}
+        <a href="/">Voltar para a Home</a>
+
+    </p>
+    </div>
+</div>
+{% endblock %}

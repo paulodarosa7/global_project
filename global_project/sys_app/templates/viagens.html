@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <h1>Viagens Cadastradas</h1>
+        {% if viagens %}
+            <ul>
+                {% for viagem in viagens %}
+                    <li>
+                        <strong>{{ viagem.destino }}</strong><br>
+                        Ida: {{ viagem.data_ida }}<br>
+                        Volta: {{ viagem.data_volta }}<br>
+                        <a href="{% url 'detalhar_viagem' viagem.id %}">Detalhes</a>
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma viagem cadastrada.</p>
+        {% endif %} 
+    </div>
+</div>
+{% endblock %}

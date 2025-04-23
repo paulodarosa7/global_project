@@ -63,6 +63,24 @@
         button:hover {
             background-color: #e64a19;
         }
+
+        
+        input[type="text"],
+        input[type="date"] {
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ff6f00;
+            outline: none;
+        }
+
     </style>
 </head>
 <body>  
@@ -71,6 +89,9 @@
     </header>
     <nav>
         <a href="/">Welcome</a>
+        <a href="/viagens/nova/">Cadastre novas viagens</a>
+        <a href="/viagens/">Suas viagens</a>
+
     </nav>
     
     <main>
